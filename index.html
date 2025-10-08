@@ -4,14 +4,14 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Shaolun Liu — Independent Researcher</title>
-  <meta name="description" content="Personal website of Shaolun Liu — independent researcher in security, AI, and geospatial analysis." />
+  <meta name="description" content="Personal website of Shaolun Liu — independent researcher in security engineering, API security, CI/CD, and geospatial analysis." />
   <meta name="author" content="Shaolun Liu" />
 
   <!-- Social preview -->
   <meta property="og:title" content="Shaolun Liu — Independent Researcher" />
-  <meta property="og:description" content="Security & AI research • GraphQL security testing • Geospatial analytics for placer mining" />
+  <meta property="og:description" content="Security engineering • API security testing • CI/CD & DevSecOps • Geospatial analytics" />
   <meta property="og:type" content="website" />
-  <meta property="og:url" content="https://shaolun-liu.github.io" />
+  <meta property="og:url" content="https://SLL288.github.io/shaolun_liu.github.io/" />
   <meta name="twitter:card" content="summary" />
 
   <style>
@@ -116,18 +116,18 @@
     <section class="hero">
       <div class="card">
         <div class="card-inner">
-          <h1>Security & AI • GraphQL Fuzzing • Geospatial Analytics</h1>
-          <p class="tagline">I explore practical security testing for GraphQL APIs (<em>PrediQL</em>), and apply AI + geospatial methods to placer-gold prospecting in West Africa. Volunteer collaborator with the Cybersecurity Lab of Mohammad A. Tayeb.</p>
+          <h1>Security Engineering • API Security • Geospatial Analytics</h1>
+          <p class="tagline">I work on API security testing, CI/CD/DevSecOps pipelines, and geospatial analysis workflows (QGIS, WhiteboxTools).</p>
 
           <div class="kpis">
-            <span class="pill">GraphQL Security • Fuzzing • RAG</span>
+            <span class="pill">API Security • Fuzzing • SAST/DAST</span>
+            <span class="pill">CI/CD • DevSecOps • Cloud</span>
             <span class="pill">QGIS • WhiteboxTools • DEM/HAND/TPI</span>
-            <span class="pill">Python • Bash • LLM Ops</span>
           </div>
 
           <div class="links">
             <a class="btn" href="https://github.com/SLL288">GitHub</a>
-            <a class="btn" href="https://shaolun-liu.github.io">Website</a>
+            <a class="btn" href="https://SLL288.github.io/shaolun_liu.github.io/">Website</a>
             <a class="btn" href="https://openreview.net/" title="OpenReview profile (pending)">OpenReview</a>
           </div>
         </div>
@@ -135,8 +135,7 @@
       <div class="card">
         <div class="card-inner">
           <h2 id="about">About</h2>
-          <p>I am an independent researcher and engineer working at the intersection of software security, machine learning, and geospatial analysis. My current work includes a schema-aware, multi-armed-bandit approach to GraphQL fuzzing (<strong>PrediQL</strong>) and field-informed geospatial workflows (QGIS, WhiteboxTools) to identify paleo-channels and placer gold targets in Liberia.</p>
-          <p>Previously, I have collaborated with the <em>Cybersecurity Lab of Mohammad A. Tayeb</em> on security testing research. I enjoy building complete pipelines: data collection → modeling → evaluation → deployment.</p>
+          <p>I am an independent researcher and engineer working at the intersection of software security, CI/CD, and geospatial analysis. My current work includes a schema-aware approach to API fuzzing (PrediQL) and robust geospatial workflows (QGIS, WhiteboxTools) for mapping and analysis.</p>
           <div class="links">
             <button class="btn" onclick="setTheme(document.documentElement.dataset.theme==='light'?'dark':'light')">Toggle theme</button>
             <a class="btn" href="#contact">Get in touch</a>
@@ -149,20 +148,20 @@
       <h2>Research Interests</h2>
       <div class="grid">
         <div class="col-6 item">
-          <h3>GraphQL Security Testing</h3>
-          <p>LLM-assisted, schema-aware fuzzing; dependency reasoning between queries/mutations; multi-armed bandit strategy selection; negative coverage metrics.</p>
+          <h3>API Security Testing</h3>
+          <p>Schema-aware fuzzing; dependency reasoning between requests; strategy selection; measurable coverage metrics.</p>
         </div>
         <div class="col-6 item">
-          <h3>Geospatial Analytics for Placer Mining</h3>
-          <p>DEM-derived hydrology (HAND, TPI, curvature), paleo-channel detection, UAV/remote sensing workflows, stream hotspot ranking.</p>
+          <h3>Geospatial Analytics</h3>
+          <p>DEM-derived hydrology (HAND, TPI, curvature), paleo-channel feature detection, remote sensing workflows, spatial hotspot analysis.</p>
         </div>
         <div class="col-6 item">
-          <h3>LLM Systems & RAG</h3>
-          <p>Local LLMs (Ollama), FAISS embeddings, schema/document flattening, safety & evaluation, reproducible pipelines.</p>
+          <h3>CI/CD & DevSecOps</h3>
+          <p>Secure software supply chains, automated SAST/DAST/SCA, container security, cloud-native deployment.</p>
         </div>
         <div class="col-6 item">
-          <h3>Practical Software Engineering</h3>
-          <p>End-to-end Python toolchains, Bash automation, data engineering for scientific computing and field operations.</p>
+          <h3>Data Systems & Retrieval</h3>
+          <p>Embeddings, indexing, retrieval and evaluation, reproducible data pipelines.</p>
         </div>
       </div>
     </section>
@@ -171,13 +170,26 @@
       <h2>Selected Projects</h2>
       <div class="grid">
         <div class="col-12 item">
-          <h3>PrediQL — Schema-Aware GraphQL Fuzzing</h3>
-          <p>Automatic generation of valid GraphQL queries/mutations with adaptive exploration; integrates GraphQler outputs, LLM mutation, and coverage tracking. <em>Status:</em> research prototype.</p>
-          <p><strong>Highlights:</strong> multi-armed bandit for strategy selection; schema dependency inference; realistic parameter injection.</p>
+          <h3>PrediQL — Schema-Aware API Fuzzing</h3>
+          <p>Automatic generation of valid API requests with adaptive exploration; integrates schema parsing and coverage tracking. <em>Status:</em> research prototype.</p>
+          <p><strong>Highlights:</strong> strategy selection; dependency inference; realistic parameter handling.</p>
         </div>
         <div class="col-12 item">
-          <h3>Paleo-Channel Ranking Pipeline</h3>
-          <p>QGIS + WhiteboxTools processing chain for Liberia DEM tiles: stream extraction, HAND filters, TPI bands, paleo-score compositing, hotspot vectorization for field sampling.</p>
+          <h3>Geomorphology & Hydrology Toolkit</h3>
+          <p>QGIS + WhiteboxTools processing chain for DEM tiles: stream extraction, HAND filters, TPI bands, composite scoring, and vectorization for mapping and analysis.</p>
+        </div>
+        <div class="col-12 item">
+          <h3>DevSecOps Pipeline</h3>
+          <p>End-to-end CI/CD security pipeline (descriptions only):</p>
+          <ul>
+            <li><strong>SAST:</strong> Sonar, Semgrep, CodeQL.</li>
+            <li><strong>SCA & Dependencies:</strong> Snyk, FOSSA, Renovate.</li>
+            <li><strong>Secrets:</strong> Gitleaks, GitGuardian, TruffleHog.</li>
+            <li><strong>Container Security:</strong> Trivy image scanning.</li>
+            <li><strong>Deploy Targets:</strong> AWS ECS, Azure Web App, or Google Cloud Run.</li>
+            <li><strong>DAST:</strong> OWASP ZAP and Nuclei after deployment.</li>
+          </ul>
+          <p><em>No source code or workflow YAML is shown on this site.</em></p>
         </div>
       </div>
     </section>
@@ -192,7 +204,7 @@
     <section id="contact">
       <h2>Contact</h2>
       <div class="item">
-        <p>Email: <a href="mailto:shaolun.personal@gmail.com">shaolun.personal@gmail.com</a></p>
+        <p>Email: <a href="mailto:shaolun28@gmail.com">shaolun.personal@gmail.com</a></p>
         <p>GitHub: <a href="https://github.com/SLL288">@SLL288</a></p>
         <p>OpenReview: <a href="https://openreview.net/">Profile (pending activation)</a></p>
       </div>
@@ -210,14 +222,14 @@
     "@context": "https://schema.org",
     "@type": "Person",
     "name": "Shaolun Liu",
-    "url": "https://shaolun-liu.github.io",
+    "url": "https://SLL288.github.io/shaolun_liu.github.io/",
     "sameAs": [
       "https://github.com/SLL288",
       "https://openreview.net/"
     ],
     "jobTitle": "Independent Researcher",
     "affiliation": [{"@type":"Organization","name":"Independent Research"}],
-    "knowsAbout": ["GraphQL security", "fuzzing", "QGIS", "WhiteboxTools", "LLM", "FAISS", "RAG", "geospatial analysis"]
+    "knowsAbout": ["API security", "fuzzing", "QGIS", "WhiteboxTools", "geospatial analysis"]
   }
   </script>
 </body>
