@@ -1,0 +1,224 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Shaolun Liu — Independent Researcher</title>
+  <meta name="description" content="Personal website of Shaolun Liu — independent researcher in security, AI, and geospatial analysis." />
+  <meta name="author" content="Shaolun Liu" />
+
+  <!-- Social preview -->
+  <meta property="og:title" content="Shaolun Liu — Independent Researcher" />
+  <meta property="og:description" content="Security & AI research • GraphQL security testing • Geospatial analytics for placer mining" />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://shaolun-liu.github.io" />
+  <meta name="twitter:card" content="summary" />
+
+  <style>
+    :root {
+      --bg: #0b0d10;
+      --panel: #11151a;
+      --text: #e6eef7;
+      --muted: #a8b3c3;
+      --accent: #70a1ff;
+      --accent-2: #66e2d5;
+      --border: #1e2530;
+      --code: #12161c;
+      --shadow: 0 10px 30px rgba(0,0,0,.35);
+      --radius: 18px;
+    }
+    @media (prefers-color-scheme: light) {
+      :root { --bg:#f7f9fc; --panel:#ffffff; --text:#0e1621; --muted:#506072; --accent:#2266ff; --accent-2:#0fb; --border:#e6ecf4; --code:#f1f5fb; --shadow:0 10px 25px rgba(10,30,60,.08); }
+    }
+    html, body { height: 100%; }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0; padding: 0; background: radial-gradient(1200px 600px at 10% -5%, rgba(102,226,213,.15), transparent 60%), radial-gradient(900px 500px at 90% -10%, rgba(112,161,255,.18), transparent 55%), var(--bg);
+      color: var(--text);
+      font: 16px/1.6 system-ui, -apple-system, Segoe UI, Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif;
+      letter-spacing: .2px;
+    }
+    .container { max-width: 980px; margin: 0 auto; padding: 28px 22px 80px; }
+    header { display: flex; align-items: center; justify-content: space-between; gap: 16px; position: sticky; top: 0; backdrop-filter: saturate(160%) blur(10px); background: color-mix(in oklab, var(--bg) 80%, transparent); border-bottom: 1px solid var(--border); padding: 12px 22px; z-index: 999; }
+    header .brand { display:flex; align-items:center; gap:14px; }
+    .avatar { width: 44px; height: 44px; border-radius: 50%; background: linear-gradient(135deg, var(--accent), var(--accent-2)); border: 3px solid color-mix(in oklab, var(--panel) 90%, transparent); box-shadow: var(--shadow); }
+    nav a { color: var(--muted); text-decoration: none; margin-left: 16px; font-weight: 600; }
+    nav a:hover { color: var(--text); }
+
+    .hero { margin-top: 42px; display: grid; grid-template-columns: 1.1fr .9fr; gap: 24px; }
+    .card { background: var(--panel); border: 1px solid var(--border); border-radius: var(--radius); box-shadow: var(--shadow); }
+    .card-inner { padding: 24px; }
+    h1 { font-size: clamp(28px, 2.8vw, 42px); line-height: 1.2; margin: 0 0 8px; letter-spacing: .4px; }
+    .tagline { color: var(--muted); margin: 6px 0 16px; }
+    .pill { display:inline-flex; align-items:center; gap:8px; padding:8px 12px; border-radius: 999px; border:1px solid var(--border); background: color-mix(in oklab, var(--panel) 96%, transparent); color: var(--muted); font-weight:600; }
+    .kpis { display:flex; flex-wrap: wrap; gap: 12px; margin: 18px 0 22px; }
+
+    .links { display:flex; flex-wrap: wrap; gap: 10px; margin-top: 12px; }
+    .btn { display:inline-block; padding: 10px 14px; border-radius: 12px; border:1px solid var(--border); background: linear-gradient(180deg, color-mix(in oklab, var(--panel) 90%, transparent), color-mix(in oklab, var(--panel) 98%, transparent)); color: var(--text); font-weight:700; text-decoration:none; }
+    .btn:hover { transform: translateY(-1px); }
+
+    section { margin-top: 36px; }
+    h2 { font-size: 20px; margin: 0 0 14px; letter-spacing: .3px; }
+    .grid { display: grid; grid-template-columns: repeat(12, 1fr); gap: 16px; }
+    .col-6 { grid-column: span 6; }
+    .col-12 { grid-column: span 12; }
+
+    .item { padding: 18px; border-radius: 14px; background: var(--panel); border: 1px solid var(--border); }
+    .item h3 { margin: 0 0 6px; font-size: 16px; }
+    .item p { margin: 0; color: var(--muted); }
+
+    code, pre { background: var(--code); border: 1px solid var(--border); border-radius: 12px; }
+    code { padding: 2px 6px; }
+    pre { padding: 14px; overflow: auto; }
+
+    footer { margin: 48px 0 0; padding-top: 20px; border-top: 1px dashed var(--border); color: var(--muted); font-size: 14px; }
+
+    /* Small screens */
+    @media (max-width: 820px) {
+      .hero { grid-template-columns: 1fr; }
+      header { position: static; }
+      nav { display:none; }
+      .col-6 { grid-column: span 12; }
+    }
+  </style>
+
+  <script>
+    // Optional: Dark/Light toggle (remembers choice)
+    function setTheme(mode){
+      document.documentElement.dataset.theme = mode;
+      localStorage.setItem('theme', mode);
+    }
+    (function(){
+      const saved = localStorage.getItem('theme');
+      if(saved) document.documentElement.dataset.theme = saved;
+    })();
+  </script>
+</head>
+<body>
+  <header>
+    <div class="brand">
+      <div class="avatar" aria-hidden="true"></div>
+      <div>
+        <strong>Shaolun Liu</strong><br>
+        <span style="color:var(--muted)">Independent Researcher</span>
+      </div>
+    </div>
+    <nav>
+      <a href="#about">About</a>
+      <a href="#research">Research</a>
+      <a href="#projects">Projects</a>
+      <a href="#publications">Publications</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </header>
+
+  <main class="container">
+    <section class="hero">
+      <div class="card">
+        <div class="card-inner">
+          <h1>Security & AI • GraphQL Fuzzing • Geospatial Analytics</h1>
+          <p class="tagline">I explore practical security testing for GraphQL APIs (<em>PrediQL</em>), and apply AI + geospatial methods to placer-gold prospecting in West Africa. Volunteer collaborator with the Cybersecurity Lab of Mohammad A. Tayeb.</p>
+
+          <div class="kpis">
+            <span class="pill">GraphQL Security • Fuzzing • RAG</span>
+            <span class="pill">QGIS • WhiteboxTools • DEM/HAND/TPI</span>
+            <span class="pill">Python • Bash • LLM Ops</span>
+          </div>
+
+          <div class="links">
+            <a class="btn" href="https://github.com/SLL288">GitHub</a>
+            <a class="btn" href="https://shaolun-liu.github.io">Website</a>
+            <a class="btn" href="https://openreview.net/" title="OpenReview profile (pending)">OpenReview</a>
+          </div>
+        </div>
+      </div>
+      <div class="card">
+        <div class="card-inner">
+          <h2 id="about">About</h2>
+          <p>I am an independent researcher and engineer working at the intersection of software security, machine learning, and geospatial analysis. My current work includes a schema-aware, multi-armed-bandit approach to GraphQL fuzzing (<strong>PrediQL</strong>) and field-informed geospatial workflows (QGIS, WhiteboxTools) to identify paleo-channels and placer gold targets in Liberia.</p>
+          <p>Previously, I have collaborated with the <em>Cybersecurity Lab of Mohammad A. Tayeb</em> on security testing research. I enjoy building complete pipelines: data collection → modeling → evaluation → deployment.</p>
+          <div class="links">
+            <button class="btn" onclick="setTheme(document.documentElement.dataset.theme==='light'?'dark':'light')">Toggle theme</button>
+            <a class="btn" href="#contact">Get in touch</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="research">
+      <h2>Research Interests</h2>
+      <div class="grid">
+        <div class="col-6 item">
+          <h3>GraphQL Security Testing</h3>
+          <p>LLM-assisted, schema-aware fuzzing; dependency reasoning between queries/mutations; multi-armed bandit strategy selection; negative coverage metrics.</p>
+        </div>
+        <div class="col-6 item">
+          <h3>Geospatial Analytics for Placer Mining</h3>
+          <p>DEM-derived hydrology (HAND, TPI, curvature), paleo-channel detection, UAV/remote sensing workflows, stream hotspot ranking.</p>
+        </div>
+        <div class="col-6 item">
+          <h3>LLM Systems & RAG</h3>
+          <p>Local LLMs (Ollama), FAISS embeddings, schema/document flattening, safety & evaluation, reproducible pipelines.</p>
+        </div>
+        <div class="col-6 item">
+          <h3>Practical Software Engineering</h3>
+          <p>End-to-end Python toolchains, Bash automation, data engineering for scientific computing and field operations.</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="projects">
+      <h2>Selected Projects</h2>
+      <div class="grid">
+        <div class="col-12 item">
+          <h3>PrediQL — Schema-Aware GraphQL Fuzzing</h3>
+          <p>Automatic generation of valid GraphQL queries/mutations with adaptive exploration; integrates GraphQler outputs, LLM mutation, and coverage tracking. <em>Status:</em> research prototype.</p>
+          <p><strong>Highlights:</strong> multi-armed bandit for strategy selection; schema dependency inference; realistic parameter injection.</p>
+        </div>
+        <div class="col-12 item">
+          <h3>Paleo-Channel Ranking Pipeline</h3>
+          <p>QGIS + WhiteboxTools processing chain for Liberia DEM tiles: stream extraction, HAND filters, TPI bands, paleo-score compositing, hotspot vectorization for field sampling.</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="publications">
+      <h2>Publications & Writing</h2>
+      <div class="item">
+        <p>Preprints and write-ups will be listed here. For code and datasets, see <a href="https://github.com/SLL288">github.com/SLL288</a>. If you’re a program chair/reviewer and need a private artifact, contact me below.</p>
+      </div>
+    </section>
+
+    <section id="contact">
+      <h2>Contact</h2>
+      <div class="item">
+        <p>Email: <a href="mailto:shaolun.personal@gmail.com">shaolun.personal@gmail.com</a></p>
+        <p>GitHub: <a href="https://github.com/SLL288">@SLL288</a></p>
+        <p>OpenReview: <a href="https://openreview.net/">Profile (pending activation)</a></p>
+      </div>
+    </section>
+
+    <footer>
+      <div>© <span id="y"></span> Shaolun Liu — Independent Researcher. Built with vanilla HTML/CSS. Hosted on GitHub Pages.</div>
+      <script>document.getElementById('y').textContent = new Date().getFullYear();</script>
+    </footer>
+  </main>
+
+  <!-- Structured data for richer previews -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "Shaolun Liu",
+    "url": "https://shaolun-liu.github.io",
+    "sameAs": [
+      "https://github.com/SLL288",
+      "https://openreview.net/"
+    ],
+    "jobTitle": "Independent Researcher",
+    "affiliation": [{"@type":"Organization","name":"Independent Research"}],
+    "knowsAbout": ["GraphQL security", "fuzzing", "QGIS", "WhiteboxTools", "LLM", "FAISS", "RAG", "geospatial analysis"]
+  }
+  </script>
+</body>
+</html>
