@@ -15,6 +15,25 @@
   <meta name="twitter:card" content="summary" />
 
   <style>
+    /* Contact section refinement */
+    #contact a {
+      color: var(--accent);
+     }
+    
+    #contact a:hover {
+      color: var(--accent-2);
+     }
+        /* Unified link styling */
+    a {
+      color: color-mix(in oklab, var(--accent) 75%, var(--text));
+      text-decoration: none;
+      font-weight: 600;
+     }
+    
+    a:hover {
+      color: var(--accent-2);
+      text-decoration: underline;
+     }
     :root {
       --bg: #0b0d10;
       --panel: #11151a;
@@ -224,7 +243,14 @@
       <div class="item">
         <p>Email: <a href="mailto:shaolun28@gmail.com">shaolun28@gmail.com</a></p>
         <p>GitHub: <a href="https://github.com/SLL288">@SLL288</a></p>
-        <p>OpenReview: <a href="https://openreview.net/">Profile (pending activation)</a></p>
+        <p>
+        OpenReview:
+          <a href="https://openreview.net/profile?id=%7EShaolun_Liu1"
+             target="_blank" rel="noopener">
+            Profile
+          </a>
+        </p>
+
       </div>
     </section>
 
